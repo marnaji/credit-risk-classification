@@ -18,13 +18,10 @@ For this challenge, I will utilize diverse methodologies to construct and assess
     Write a brief report that includes a summary and analysis of the performance of the machine learning models that you used in this homework. You should write this report as the README.md file included in your GitHub repository.
 </br>
 
-
 # Credit Risk Analysis Report
 
 1. [Overview of the Analysis](#An-overview-of-the-analysis)
-
 2. [Model Results](#results)
-
 3. [Summary](#summary)
 </br>
 
@@ -32,6 +29,7 @@ For this challenge, I will utilize diverse methodologies to construct and assess
 * The primary purpose of this challenge is to employ a range of methodologies for training and assessing a loan risk-based model. Leveraging a dataset of past lending transactions from a peer-to-peer lending services company, the objective is to construct a model capable of assessing the creditworthiness of borrowers. 
 
 * Following the data split into training and testing sets, it becomes evident that the distribution of target values between healthy and unhealthy loans is imbalanced. There is a larger amount of data available for healthy loans in comparison to unhealthy ones.
+
 ```
 # code
 y.value_counts()
@@ -43,10 +41,12 @@ Name: loan_status, dtype: int64
 ```
 
 * The prediction accuracy rate is 95% , but the recall value (0.91) for unhealthy loans is lower than the recall value (0.99) for healthy loans. 
+
 ![classification report](/images/report.png)
 </br>
 
 * In order to improve the accuracy and enhance the model's ability to detect errors in the classification of unhealthy loans, we can employ data oversampling. This involves using the RandomOverSampler module from the imbalanced-learn library to introduce additional instances of the minority class (unhealthy loans), thus achieving a more balanced dataset.
+
 ```
 # code
 y_oversampled.value_counts()
@@ -56,8 +56,12 @@ y_oversampled.value_counts()
 1    56271
 Name: loan_status, dtype: int64
 ```
+
 * The Logistic Regression Model, when trained with oversampled data, achieved an impressive accuracy score of 99%. Furthermore, the recall value for identifying unhealthy loans increased from 0.91 to 0.99. This improvement indicates that the model excels in its ability to detect errors, particularly in situations where high-risk loans are incorrectly labeled as low-risk or healthy.
+
 ![classification report oversampled](/images/oversampledreport.png)
+</br>
+
 ## **results**
 ### Logistic Regression Model fitted with Imbalanced Data: 
 </br>
