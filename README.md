@@ -1,12 +1,11 @@
 # credit-risk-classification
-This challenge  I will employ various techniques to build and evaluate a loan risk model using a dataset of historical lending activity from a peer-to-peer lending firm, enabling the assessment of borrower creditworthiness.
+For this challenge, I will utilize diverse methodologies to construct and assess a loan risk model. This process will involve working with a dataset comprising historical lending transactions from a peer-to-peer lending company to facilitate the evaluation of borrower creditworthiness.
 
 ### Instructions
 1. Split the Data into Training and Testing Sets
     * Read the lending_data.csv data from the Resources folder into a Pandas DataFrame.
     * Create the labels set (y) from the “loan_status” column, and then create the features (X) DataFrame from the remaining columns.
     * Split the data into training and testing datasets by using train_test_split.
-
 
 2. Create a Logistic Regression Model with the Original Data
     * Fit a logistic regression model by using the training data (X_train and y_train).
@@ -15,14 +14,14 @@ This challenge  I will employ various techniques to build and evaluate a loan ri
         1. Generate a confusion matrix.
         2. Print the classification report.
 
-
 3. Write a Credit Risk Analysis Report
     Write a brief report that includes a summary and analysis of the performance of the machine learning models that you used in this homework. You should write this report as the README.md file included in your GitHub repository.
 </br>
 
+
 # Credit Risk Analysis Report
 
-1. [Overview of the Analysis](#overview-of-the-analysis)
+1. [Overview of the Analysis](#An-overview-of-the-analysis)
 
 2. [Model Results](#results)
 
@@ -32,7 +31,7 @@ This challenge  I will employ various techniques to build and evaluate a loan ri
 ## **An overview of the analysis**
 * The primary purpose of this challenge is to employ a range of methodologies for training and assessing a loan risk-based model. Leveraging a dataset of past lending transactions from a peer-to-peer lending services company, the objective is to construct a model capable of assessing the creditworthiness of borrowers. 
 
-* After Split the Data into Training and Testing Sets, the balance of target values for health vs unhealthy loans is imbalanced since we have more data for healthy loans to comapre with unhealthy ones.
+* Following the data split into training and testing sets, it becomes evident that the distribution of target values between healthy and unhealthy loans is imbalanced. There is a larger amount of data available for healthy loans in comparison to unhealthy ones.
 ```
 # code
 y.value_counts()
@@ -64,26 +63,26 @@ Name: loan_status, dtype: int64
 </br>
 
 * Accuracy score : 
-    Accuracy score of the model was 95% which means that the model performed well. 
+    An accuracy score of 95% suggests that the model performed admirably. It accurately predicted the outcomes for 95% of the cases, which is indicative of its overall effectiveness. 
 ![accuracyScore rate](/images/accuracyScore.png)
 * Precision score : 
-    In this case, for class low risk, the precision is 1.00, which means that when the model predicted class low risk, it was almost always correct. For class high risk, the precision is 0.85, meaning that when the model predicted class high risk, it was correct about 85% of the time.
+    In this context, when it comes to the low risk class, the precision is 1.00, signifying that the model's predictions for the low-risk class were almost always accurate. On the other hand, for the high risk class, the precision is 0.85, indicating that when the model made predictions for the high-risk class, it was correct about 85% of the time.
 
 * Recall score:  
-    For class low risk, the recall is 1.00, indicating that 100% of actual class low risk cases were correctly identified by the model. For class high risk, the recall is also 0.88, meaning 88% of actual class high risk cases were correctly identified.
+    The recall values for both classes are notable. For the low risk class, the recall is 1.00, which means that the model correctly identified 100% of the actual low-risk cases. As for the high risk class, the recall is 0.88, indicating that the model accurately identified 88% of the actual high-risk cases.
 </br>
 
 ### Logistic Regression Model fitted with oversampled Data:
 <br>
 
 * Accuracy score : 
-    Accuracy score of the model was 99% which means that the model performed perfectly. 
+    An accuracy score of 99% indicates that the model performed exceptionally well and achieved near-perfect accuracy. It accurately predicted the outcomes for 99% of the cases, suggesting a high level of performance and precision. 
 ![accuracyScore rateOverSample](/images/accuracyScoreOversampled.png)
 * Precision score : 
-    In this case, for class low risk, the precision is 1.00, which means that when the model predicted class low risk, it was almost always correct. For class high risk, the precision is 0.8, meaning that when the model predicted class high risk, it was correct about 84% of the time.
+    In this scenario, regarding the low risk class, the precision is 1.00, which implies that when the model made predictions for the low-risk class, it was almost always accurate. Conversely, for the high risk class, the precision is 0.84, indicating that when the model predicted the high-risk class, it was correct about 84% of the time.
 
 * Recall score:  
-    For class low risk, the recall is .99, indicating that 99% of actual class low risk cases were correctly identified by the model. For class high risk, the recall is also 0.99, meaning 99% of actual class high risk cases were correctly identified.
+   The recall values for both classes are remarkable. For the low risk class, the recall is 0.99, signifying that the model correctly identified 99% of the actual low-risk cases. Similarly, for the high risk class, the recall is also 0.99, indicating that the model accurately identified 99% of the actual high-risk cases.
 </br>
 
 ## **summary**
