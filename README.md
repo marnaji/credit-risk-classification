@@ -96,6 +96,7 @@ The Logistic Regression model, when trained with Oversampled data, outperformed 
   
     * 56 (FALSE POSITIVES) -->Incorrectly identified as unhealthy, these 56 instances were actually healthy.
     * 102 (FALSE NEGATIVES) -->"In truth, the loans were high-risk, but the predictions erroneously classified them as low-risk or healthy.
+    
     ![Matrix](/images/matrix.png)
 </br>
 
@@ -103,4 +104,5 @@ The Logistic Regression model, when trained with Oversampled data, outperformed 
   
     * 4 (FALSE POSITIVES) --> Incorrectly identified as unhealthy, these 4 instances were actually healthy.
     * 116 (FALSE NEGATIVES) --> "In truth, the loans were high-risk, but the predictions erroneously classified them as low-risk or healthy.
+
     ![Oversampled matrix](/images/oversampledMatrix.png)
